@@ -70,7 +70,7 @@ class UrTube:
                     print(time_now)
                     if time_now == duration:
                         print('Конец видео.')
-                        i = 0
+                        time_now = 0
             else:
                 print('Такого видео не существует.')
         else:
