@@ -21,7 +21,6 @@ class UrTube:
             user = User(nickname, password, age)
             self.data_users[user.nickname] = {'password': user.password, 'age': user.age}
             self.current_user = self.data_users[nickname]
-        # print(f'Пользователи: {self.data_users}')
 
     def log_in(self, nickname, password):
         if nickname in self.data_users:
@@ -29,12 +28,10 @@ class UrTube:
                 self.current_user = self.data_users[nickname]
         else:
             print('Пользователь не найден.')
-        # print(self.current_user)
 
     def log_out(self, nickname):
         if nickname == self.current_user:
             self.current_user = None
-            # print(self.current_user)
             exit()
 
     def add(self, *args):
@@ -43,7 +40,6 @@ class UrTube:
                 break
             else:
                 self.data_videos[i.title] = {'duration': i.duration, 'time_now': i.time_now, 'adult_mode': i.adult_mode}
-        # print(f'Видео: {self.data_videos}')
 
     def get_videos(self, search_str):
         get_list = []
